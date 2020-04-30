@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="da">
+	
+	<head>
+
+   	 	<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    	<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+		<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300&display=swap" rel="stylesheet">
+	  
+		<!-- Own CSS-->
+		<link rel="stylesheet" href="style.css">
+
+    	<title>PawBox</title>
+		
+		<!-- JavaScript-->
+		<script src = "pawbox.js"></script>	
+		
+	</head>
+	
+	<body>
+
+	<!-- Nav -->
+		<nav class="navbar navbar-light navbar-expand-sm bg-light nav1"> 
+
+			<div class="container-fluid">
+
+				<!-- Logo stor -->
+				<div class="navbar-brand d-none d-sm-block">
+					<a href="index.html">
+						<img src="img/logo.png" alt="logo" class="logo logo1">
+					</a>
+				</div>
+
+				<!-- Logo lille -->
+				<div class="navbar-brand d-block d-sm-none">
+					<a href="index.html">
+						<img src="img/logosmall.png" alt="logo" class="logo logo2">
+					</a>
+				</div>
+
+				<div class="navbar-nav navigation">
+					<a class="nav-link active nav-item link1" href="">Hjem</a>
+					<a class="nav-link nav-item link1" href="index.html#test">Test</a>
+					<a class="nav-link nav-item link1" href="index.html#bestil">Bestil</a>
+				</div>
+
+			</div>
+
+		</nav> <!--Nav slut -->
+	
+
+		<!--Tekst-->
+		<div class="container">
+			<h1 class="text text-center text-muted mt-5">PawBox</h1>
+			<div class="row my-4">
+
+				<section class="col-sm-12 col-lg-6">
+					<p class="text"> Hver måned modtager tusindvis af danskere en PawBox til enten deres kat eller hund. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quisquam quos aspernatur consequuntur sapiente eius adipisci quam similique animi reiciendis perspiciatis amet hic, laborum maxime iure est ex pariatur perferendis mollitia nemo explicabo cupiditate unde doloremque amet hic, laborum maxime iure est ex pariatur perferendis mollitia nemo explicabo cupiditate unde doloremque</p>
+				</section>
+
+				<section class="col-sm-12 col-lg-6">
+					<p class="text">Dolor sit amet, consectetur adipisicing elit. Voluptatem voluptates eius, vero earum ea, maxime porro beatae laborum nisi asperiores magnam neque voluptas. Odit placeat totam minus dolorum distinctio explicabo iure architecto nemo at sed pariatur doloremque, provident maxime nisi quidem facilis, illo eius, adipisci veritatis reiciendis. Amet hic, laborum maxime iure est ex pariatur perferendis mollitia nemo explicabo cupiditate unde doloremque</p>
+				</section>
+
+			</div> 
+		</div><!--Tekst slut-->
+		
+		<!--Video-->
+		
+		<div class="video-container img-fluid text-center mb-5">
+			<video class ="video" src="img/pawbox_header.mp4" autoplay muted loop></video>
+		</div>
+		
+		<!--Quiz-->
+		<div id="test" class="container-fuid">
+			<div class="row justify-content-center text-light">
+
+				<!--Illustarion-->
+				<section class="col-md-4 d-none d-md-block" >
+					<img class="drawing" src="img/fish.png" alt="illustration">
+				</section>
+
+				<!--Spørgsmål-->
+				<section class="col-md-4 col-sm-12 p-5 rounded backgroundcol">
+					<div class="text-center">
+						<h2  class="font-weight-bold">Test din viden!</h2>
+						<h4 class="mb-5 font-weight-bold">Hvad kan de tåle at spise?</h4>
+
+						<form id = "quiz" name = "quiz">
+
+							<p class = "questions mb-1">Kan hunde tåle chokolade?</p>
+							<input type = "radio" class="mc" name = "question1" value = "Ja"> Ja
+							<input type = "radio" class="mc mb-4" name = "question1" value = "Nej"> Nej<br>
+
+							<p class = "questions  mb-1">Kan hunde tåle gulerødder?</p>
+							<input type = "radio" class="mc" name = "question2" value = "Ja"> Ja
+							<input type = "radio" class="mc mb-4" name = "question2" value = "Nej"> Nej<br>
+
+							<p class = "questions mb-1">Kan hunde tåle ris?</p>
+							<input type = "radio" class="mc" name = "question3" value = "Ja"> Ja
+							<input type = "radio" class="mc mb-4" name = "question3" value = "Nej"> Nej<br>
+
+							<p class = "questions mb-1">Kan katte tåle mælk?</p>
+							<input type = "radio" class="mc" name = "question4" value = "Ja"> Ja
+							<input type = "radio" class="mc mb-4" name = "question4" value = "Nej"> Nej<br>
+
+							<p class = "questions mb-1">Kan katte tåle tomater?</p>
+							<input type = "radio" class="mc" name = "question5" value = "Ja"> Ja
+							<input type = "radio" class="mc mb-4" name = "question5" value = "Nej"> Nej<br>
+
+							<input class="rounded-pill px-2 py-1 border-0 text-light knap" id = "button" type = "button" value = "Færdig!" onclick = "check();">
+
+						</form>
+
+						<div class="form-check font-weight-bold mt-3" id = "after_submit">
+							<p class="mb-0" id = "number_correct"></p>
+							<p class="h3" id = "message"></p>
+						</div>
+					</div>
+				</section> <!-- Spørgsmål slut -->
+
+				<!--Illustarion-->
+				<section class="col-md-4 d-none d-md-block">
+					<img class="drawing" src="img/fish.png" alt="illustration">
+				</section>
+			</div>
+
+		</div> <!--Quiz end-->
+
+		<!--Tekst-->
+		<div class="container">
+			<h1 class="text text-center text-muted mt-5">Hvordan gør man så?</h1>
+			<div class="row my-4">
+
+				<section class="col-sm-12 col-lg-6">
+					<p class="text">Det er nemt! Du kan bestille din gratis prøvepakke i dag, det du gør er at indtaste dine informationer nedenfor. Så modtager du en prøvepakke med en tilmedingsblanket, hvi du skulle ønske at modtage igen næste måned mod betalling. På denne måde er der ingen binding. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, error? </p>
+				</section>
+
+				<section class="col-sm-12 col-lg-6">
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi sint assumenda provident accusamus, animi eligendi delectus aperiam facilis id ipsum iusto deserunt minus quaerat perspiciatis maiores qui eaque sunt, quasi magni? Placeat nostrum totam ipsam nam, excepturi aliquid quidem.</p>
+				</section>
+
+			</div> 
+		</div><!--Tekst slut-->
+		
+		<!--GWD reklame-->
+		<div class="img-fluid text-center">
+		 <iframe src="add/index.html" class="add mb-5"></iframe>
+		</div>
+			
+		<!--Bestil-->
+		<div id="bestil" class="container-fluid text-center ">
+			<div class="row wrapper justify-content-center text-light">
+				
+				<!--Illustarion-->
+				<section class="col-md-4 d-none d-md-block" >
+					<img class="drawing" src="img/bones.jpg" alt="illustration">
+				</section>
+				
+				<section class="col-md-4 col-sm-12 backgroundcol p-5 rounded">
+					<h2 class="font-weight-bolder">Om dit kæledyr</h2>
+					<div id="error_message"> 
+					</div>
+
+					<form id="myform" onsubmit = "return validate();">
+
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Hvad hedder dit kæledyr" id="petname">
+						</div>
+
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Hund eller kat" id="pet">
+						</div>
+
+						<div class="input_field mb-4">
+							<input type="text" placeholder="Race" id="race">
+						</div>
+
+						<h2 class="font-weight-bold">Leveringsinformationer</h2>  
+						<div id="error_message1">   
+						</div>  
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Fulde navn" id="name">
+						</div>
+
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Adresse" id="adresse">
+						</div>
+
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Postnummer" id="postnumber">
+						</div>  
+
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Email" id="email">
+						</div>  
+
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Mobilnummer" id="phone">
+						</div>  
+
+						<div class="input_field mb-2">
+							<textarea placeholder="evt. kommentar" id="messagecontact"></textarea>
+						</div>
+
+						<div class="btn">
+							<input class="rounded-pill px-2 py-1 border-0 knap text-light" type="submit" >
+						</div>
+
+				  </form>
+					<!--Illustarion-->
+				
+				</section>
+				<!--Illustarion-->
+				<section class="col-md-4 d-none d-md-block" >
+					<img class="drawing" src="img/bones.jpg" alt="illustration">
+				</section>
+			</div>
+		</div><!--Bestil slut-->
+
+
+		<!--Footer-->
+		<footer class="page-footer bg-secondary text-dark mt-5 p-2">
+			<div class="footer-copyright text-center py-3">© 2020 Copyright by 
+				<a class="text-light" href="http://sarasejtzer.com/portfolio-ret/index.html">Sara Sejtzer Herlet</a> ,
+				<a class="text-light" href="http://miegroenkjaerjoergensen.com/eksamen/Ny_portfolio/Kontakt_mig.html">Mie Grønkjær Jørgensen</a> og
+				<a class="text-light" href="http://malenemadsen.dk/Hjemmeside1/Portfolio-projekter.html">Malene Thostrup Madsen</a>
+
+			</div>
+		</footer>
+
+	</body>
+</html>
